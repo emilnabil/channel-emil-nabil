@@ -17,11 +17,11 @@ cd /tmp
 set -e 
 wget -q  "https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main/channels_backup_by_Emil-Nabil.tar.gz"
 wait
-tar -xzf channels_backup_by-romeh.tar.gz  -C /
+tar -xzf channels_backup_by_Emil-Nabil.tar.gz  -C /
 wait
 cd ..
 set +e
-rm -f /tmp/channels_backup_by-romeh.tar.gz
+rm -f /tmp/channels_backup_by_Emil-Nabil.tar.gz
 sleep 2;
 echo "" 
 echo "" 
@@ -39,6 +39,7 @@ echo "**************************************************************************
 wait
 killall -9 enigma2
 exit 0
+
 
 
 

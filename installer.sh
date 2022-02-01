@@ -24,6 +24,17 @@ set +e
 rm -f /tmp/channels_backup_by_Emil-Nabil.tar.gz
 sleep 2;
 echo "" 
+echo "Installing astra sm patch"
+opkg install astra-sm 
+sleep 1
+wget -O /etc/astra/scripts/abertis "https://drive.google.com/uc?id=1B0k60UTtmrHgQTrRkI6SFR3TenCZO_eL&export=download"
+chmod 755 /etc/astra/scripts/abertis
+sleep 1
+wget -O /etc/astra/astra.conf "https://drive.google.com/uc?id=1B16pdta4o2u_PChUAG1hEAWKj1So2vCh&export=download"
+chmod 755 /etc/astra/astra.conf
+sleep 1
+echo ""
+echo ""
 echo "" 
 echo "****************************************************************************************************************************"
 echo "# Channel  INSTALLED SUCCESSFULLY #"
@@ -39,6 +50,7 @@ echo "**************************************************************************
 wait
 killall -9 enigma2
 exit 0
+
 
 
 

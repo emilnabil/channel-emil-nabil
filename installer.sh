@@ -4,13 +4,6 @@ MY_URL=https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main/
 echo "******************************************************************************************************************"
 echo "    download and install channel  "
 echo "============================================================================================================================="
-echo " remove old channel "
-# Remove any Channel  # 
-rm -rf /etc/enigma2/lamedb 
-rm -rf /etc/enigma2/*list 
-rm -rf /etc/enigma2/*.tv 
-rm -rf /etc/enigma2/*.radio 
-rm -rf /etc/tuxbox/*.xml 
 #####################################################################################
 echo "         install channel    "
 cd /tmp
@@ -51,22 +44,4 @@ echo "**************************************************************************
 wait
 init 6
 exit 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

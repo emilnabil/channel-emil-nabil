@@ -3,7 +3,7 @@
 # SCRIPT : DOWNLOAD AND INSTALL Channel
 # ###########################################
 #
-# Command: wget https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main/installer.sh -qO - | /bin/sh
+# Command: wget https://raw.githubusercontent.com/emil237/channel-emil-nabil/main/installer.sh -qO - | /bin/sh
 #
 # ###########################################
 
@@ -11,7 +11,7 @@
 # Configure where we can find things here #
 TMPDIR='/tmp'
 PACKAGE='astra-sm'
-MY_URL='https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main'
+MY_URL='https://raw.githubusercontent.com/emil237/channel-emil-nabil/main'
 
 ########################
 VERSION=$(wget $MY_URL/version -qO- | cut -d "=" -f2-)
@@ -158,9 +158,8 @@ fi
 
 #########################
 rm -rf ${TMPDIR}/channels_backup_by_Emil-Nabil.tar.gz
-rm -rf ${TMPDIR}/* astra-
-rm -rf ${TMPDIR}/* bbc_pmt_v6
-
+rm -rf ${TMPDIR}/*astra-
+rm -rf ${TMPDIR}/*bbc_pmt_v6
 sync
 echo ""
 echo ""
@@ -182,4 +181,5 @@ else
 fi
 
 exit 0
+
 

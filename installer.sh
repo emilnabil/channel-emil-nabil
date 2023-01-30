@@ -1,7 +1,161 @@
 #!/bin/sh
 # ###########################################
-echo "ZWNobyAiIFNDUklQVCA6IERPV05MT0FEIEFORCBJTlNUQUxMIENoYW5uZWwgIgojICMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKVE1QRElSPScvdG1wJwpQQUNLQUdFPSdhc3RyYS1zbScKTVlfVVJMPSdodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZW1pbG5hYmlsL2NoYW5uZWwtZW1pbC1uYWJpbC9tYWluJwoKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjClZFUlNJT049JCh3Z2V0ICRNWV9VUkwvdmVyc2lvbiAtcU8tIHwgY3V0IC1kICI9IiAtZjItKQoKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCkJJTlBBVEg9L3Vzci9iaW4KRVRDUEFUSD0vZXRjCkFTVFJBUEFUSD0ke0VUQ1BBVEh9L2FzdHJhCiMjIyMjIwpCQkNQTVQ9JHtCSU5QQVRIfS9iYmNfcG10X3N0YXJ0ZXIuc2gKQkJDUFk9JHtCSU5QQVRIfS9iYmNfcG10X3Y2LnB5CkJCQ0VOSUdNQT0ke0JJTlBBVEh9L2VuaWdtYTJfcHJlX3N0YXJ0LnNoCiMjIyMjIwpTWVNDT05GPSR7RVRDUEFUSH0vc3lzY3RsLmNvbmYKQVNUUkFDT05GPSR7QVNUUkFQQVRIfS9hc3RyYS5jb25mCkFCRVJUSVNCSU49JHtBU1RSQVBBVEh9L3NjcmlwdHMvYWJlcnRpcwoKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCkNPTkZJR3BtdHRtcD0ke1RNUERJUn0vYmJjX3BtdF92Ni9iYmNfcG10X3N0YXJ0ZXIuc2gKQ09ORklHcHl0bXA9JHtUTVBESVJ9L2JiY19wbXRfdjYvYmJjX3BtdF92Ni5weQpDT05GSUdlbnRtcD0ke1RNUERJUn0vYmJjX3BtdF92Ni9lbmlnbWEyX3ByZV9zdGFydC5zaApDT05GSUdzeXNjdGx0bXA9JHtUTVBESVJ9LyR7UEFDS0FHRX0vc3lzY3RsLmNvbmYKQ09ORklHYXN0cmF0bXA9JHtUTVBESVJ9LyR7UEFDS0FHRX0vYXN0cmEuY29uZgpDT05GSUdhYmVydGlzdG1wPSR7VE1QRElSfS8ke1BBQ0tBR0V9L2FiZXJ0aXMKCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwppZiBbIC1mIC9ldGMvb3BrZy9vcGtnLmNvbmYgXTsgdGhlbgogICAgU1RBVFVTPScvdmFyL2xpYi9vcGtnL3N0YXR1cycKICAgIE9TVFlQRT0nT3BlbnNvdXJjZScKICAgIE9QS0c9J29wa2cgdXBkYXRlJwogICAgT1BLR0lOU1RBTD0nb3BrZyBpbnN0YWxsJwpmaQoKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCnJtIC1yZiAvZXRjL2VuaWdtYTIvbGFtZWRiCnJtIC1yZiAvZXRjL2VuaWdtYTIvKmxpc3QKcm0gLXJmIC9ldGMvZW5pZ21hMi8qLnR2CnJtIC1yZiAvZXRjL2VuaWdtYTIvKi5yYWRpbwpybSAtcmYgL2V0Yy90dXhib3gvKi54bWwKCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwppbnN0YWxsKCkgewogICAgaWYgZ3JlcCAtcXMgIlBhY2thZ2U6ICQxIiAkU1RBVFVTOyB0aGVuCiAgICAgICAgZWNobwogICAgZWxzZQogICAgICAgICRPUEtHID4vZGV2L251bGwgMj4mMQogICAgICAgIGVjaG8gIiAgID4+Pj4gICBOZWVkIHRvIGluc3RhbGwgJDEgICA8PDw8IgogICAgICAgIGVjaG8KICAgICAgICAkT1BLR0lOU1RBTCAiJDEiCiAgICAgICAgc2xlZXAgMQogICAgICAgIGNsZWFyCiAgICBmaQp9CgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKaWYgWyAkT1NUWVBFID0gIk9wZW5zb3VyY2UiIF07IHRoZW4KICAgIGZvciBpIGluIGR2YnNub29wICRQQUNLQUdFOyBkbwogICAgICAgIGluc3RhbGwgJGkKICAgIGRvbmUKZmkKCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKY2FzZSAkKHVuYW1lIC1tKSBpbgphcm12N2wqKSBwbGFyZm9ybT0iYXJtIiA7OwptaXBzKikgcGxhcmZvcm09Im1pcHMiIDs7CmVzYWMKCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKcm0gLXJmICR7QVNUUkFDT05GfSAke1NZU0NPTkZ9CnJtIC1yZiAke1RNUERJUn0vY2hhbm5lbHNfYmFja3VwX3VzZXJfIiR7VkVSU0lPTn0iKiBhc3RyYS0qIGJiY19wbXRfdjYqCgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCmVjaG8Kc2V0IC1lCmVjaG8gIkRvd25sb2FkaW5nIEFuZCBJbnNhbGxsaW5nIENoYW5uZWwgUGxlYXNlIFdhaXQgLi4uLi4uIgp3Z2V0ICRNWV9VUkwvY2hhbm5lbHNfYmFja3VwX2J5X0VtaWwtTmFiaWwudGFyLmd6IC1xUCAkVE1QRElSCnRhciAtenhmICRUTVBESVIvY2hhbm5lbHNfYmFja3VwX2J5X0VtaWwtTmFiaWwudGFyLmd6IC1DIC8Kc2xlZXAgNQpzZXQgK2UKZWNobyAiIgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKaWYgWyAtZiAkQkJDUE1UIF0gJiYgWyAtZiAkQkJDUFkgXSAmJiBbIC1mICRCQkNFTklHTUEgXTsgdGhlbgogICAgZWNobyAiICAgPj4+PiAgIEFsbCBDb25maWcgQkJDIEZpbGVzIGZvdW5kICAgPDw8PCIKICAgIHNsZWVwIDIKZWxzZQogICAgc2V0IC1lCiAgICBlY2hvICJEb3dubG9hZGluZyBBbmQgSW5zYWxsbGluZyBDb25maWcgQkJDIFBsZWFzZSBXYWl0IC4uLi4uLiIKICAgIHdnZXQgJE1ZX1VSTC9iYmNfcG10X3Y2LnRhci5neiAtcVAgJFRNUERJUgogICAgdGFyIC14emYgJFRNUERJUi9iYmNfcG10X3Y2LnRhci5neiAtQyAkVE1QRElSCiAgICBzZXQgK2UKICAgIGNobW9kIC1SIDc1NSAke1RNUERJUn0vYmJjX3BtdF92NgogICAgc2xlZXAgMQogICAgZWNobyAiLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIgogICAKICAgIGVjaG8gIi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSIKZmkKCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKaWYgWyAkT1NUWVBFID0gIk9wZW5zb3VyY2UiIF07IHRoZW4KICAgIGlmIFsgLWYgJEFTVFJBQ09ORiBdICYmIFsgLWYgJEFCRVJUSVNCSU4gXSAmJiBbIC1mICRTWVNDT05GIF07IHRoZW4KICAgICAgICBlY2hvICIgICA+Pj4+ICAgQWxsIENvbmZpZyAkUEFDS0FHRSBGaWxlcyBmb3VuZCAgIDw8PDwiCiAgICAgICAgc2xlZXAgMgogICAgZWxzZQogICAgICAgIHNldCAtZQogICAgICAgIGVjaG8gIkRvd25sb2FkaW5nIENvbmZpZyAkUEFDS0FHRSBQbGVhc2UgV2FpdCAuLi4uLi4iCiAgICAgICAgd2dldCAkTVlfVVJML2FzdHJhLSIke3BsYXJmb3JtfSIudGFyLmd6IC1xUCAkVE1QRElSCiAgICAgICAgdGFyIC14emYgJFRNUERJUi9hc3RyYS0iJHtwbGFyZm9ybX0iLnRhci5neiAtQyAkVE1QRElSCiAgICAgICAgc2V0ICtlCiAgICAgICAgY2htb2QgLVIgNzU1ICR7VE1QRElSfS8ke1BBQ0tBR0V9CiAgICAgICAgc2xlZXAgMQogICAgICAgIGVjaG8gIi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSIKICAgICAgICBpZiBbICEgLWYgJFNZU0NPTkYgXTsgdGhlbgogICAgICAgICAgICBjcCAtZiAkQ09ORklHc3lzY3RsdG1wICRFVENQQVRIID4vZGV2L251bGwgMj4mMQogICAgICAgICAgICBlY2hvICJbc2VuZCAoc3lzY3RsLmNvbmYpIGZpbGVdIgogICAgICAgIGZpCiAgICAgICAgaWYgWyAhIC1mICRBU1RSQUNPTkYgXTsgdGhlbgogICAgICAgICAgICBjcCAtZiAkQ09ORklHYXN0cmF0bXAgJEFTVFJBUEFUSCA+L2Rldi9udWxsIDI+JjEKICAgICAgICAgICAgZWNobyAiW3NlbmQgKGFzdHJhLmNvbmYpIGZpbGVdIgogICAgICAgIGZpCiAgICAgICAgaWYgWyAhIC1mICRBQkVSVElTQklOIF07IHRoZW4KICAgICAgICAgICAgY3AgLWYgJENPTkZJR2FiZXJ0aXN0bXAgJEFTVFJBUEFUSC9zY3JpcHRzID4vZGV2L251bGwgMj4mMQogICAgICAgICAgICBlY2hvICJbc2VuZCAoYWJlcnRpcykgZmlsZV0iCiAgICAgICAgZmkKICAgICAgICBlY2hvICItLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0iCiAgICBmaQpmaQoKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwpybSAtcmYgJHtUTVBESVJ9L2NoYW5uZWxzX2JhY2t1cF9ieV9FbWlsLU5hYmlsLnRhci5negpybSAtcmYgJHtUTVBESVJ9LyogYXN0cmEtCnJtIC1yZiAke1RNUERJUn0vKiBiYmNfcG10X3Y2CgpzeW5jCmVjaG8gIiIKZWNobyAiIgplY2hvICIqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioiCmVjaG8gIiMgICAgICAgQ2hhbm5lbCBBbmQgQ29uZmlnIElOU1RBTExFRCBTVUNDRVNTRlVMTFkgICAgICAgIyIKZWNobyAiICAgVVBMT0FERUQgQlkgID4+Pj4gICBFTUlMX05BQklMICIgICAKc2xlZXAgNDsKCWVjaG8gJz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0nCmVjaG8gIiMgICAgICAgICAgICAgICAgICAgICR7VkVSU0lPTn0gICAgICAgICAgICAgICAgICAgICAgICAgIyIgICAgICAgICAgICAgICAgIAplY2hvICIqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioiCmVjaG8gIiMgICAgICAgICAgIHlvdXIgRGV2aWNlIHdpbGwgUkVTVEFSVCBOb3cgICAgICAgICAgICAgICAgIyIKZWNobyAiKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIgpzbGVlcCAyCgppZiBbICRPU1RZUEUgPSAiT3BlbnNvdXJjZSIgXTsgdGhlbgogICAgaW5pdCA2CmVsc2UKICAgIHN5c3RlbWN0bCByZXN0YXJ0IGVuaWdtYTIKZmkKCmV4aXQgMAo=" | base64 -d | sh
+# SCRIPT : DOWNLOAD AND INSTALL Channel
+########## #################################
+# Configure where we can find things here #
+TMPDIR='/tmp'
+PACKAGE='astra-sm'
+MY_URL='https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main'
+########################
+VERSION=$(wget $MY_URL/version -qO- | cut -d "=" -f2-)
+########################
+BINPATH=/usr/bin
+ETCPATH=/etc
+ASTRAPATH=${ETCPATH}/astra
+######
+BBCPMT=${BINPATH}/bbc_pmt_starter.sh
+BBCPY=${BINPATH}/bbc_pmt_v6.py
+BBCENIGMA=${BINPATH}/enigma2_pre_start.sh
+######
+SYSCONF=${ETCPATH}/sysctl.conf
+ASTRACONF=${ASTRAPATH}/astra.conf
+ABERTISBIN=${ASTRAPATH}/scripts/abertis
 
+########################
+CONFIGpmttmp=${TMPDIR}/bbc_pmt_v6/bbc_pmt_starter.sh
+CONFIGpytmp=${TMPDIR}/bbc_pmt_v6/bbc_pmt_v6.py
+CONFIGentmp=${TMPDIR}/bbc_pmt_v6/enigma2_pre_start.sh
+CONFIGsysctltmp=${TMPDIR}/${PACKAGE}/sysctl.conf
+CONFIGastratmp=${TMPDIR}/${PACKAGE}/astra.conf
+CONFIGabertistmp=${TMPDIR}/${PACKAGE}/abertis
+
+########################
+if [ -f /etc/opkg/opkg.conf ]; then
+    STATUS='/var/lib/opkg/status'
+    OSTYPE='Opensource'
+    OPKG='opkg update'
+    OPKGINSTAL='opkg install'
+fi
+
+########################
+rm -rf /etc/enigma2/lamedb
+rm -rf /etc/enigma2/*list
+rm -rf /etc/enigma2/*.tv
+rm -rf /etc/enigma2/*.radio
+rm -rf /etc/tuxbox/*.xml
+
+########################
+install() {
+    if grep -qs "Package: $1" $STATUS; then
+        echo
+    else
+        $OPKG >/dev/null 2>&1
+        echo "   >>>>   Need to install $1   <<<<"
+        echo
+        $OPKGINSTAL "$1"
+        sleep 1
+        clear
+    fi
+}
+
+########################
+if [ $OSTYPE = "Opensource" ]; then
+    for i in dvbsnoop $PACKAGE; do
+        install $i
+    done
+fi
+
+#########################
+case $(uname -m) in
+armv7l*) plarform="arm" ;;
+mips*) plarform="mips" ;;
+esac
+
+#########################
+rm -rf ${ASTRACONF} ${SYSCONF}
+rm -rf ${TMPDIR}/channels_backup_user_"${VERSION}"* astra-* bbc_pmt_v6*
+
+#########################
+echo
+set -e
+echo "Downloading And Insallling Channel Please Wait ......"
+wget $MY_URL/channels_backup_by_Emil-Nabil.tar.gz -qP $TMPDIR
+tar -zxf $TMPDIR/channels_backup_by_Emil-Nabil.tar.gz -C /
+sleep 5
+set +e
+#########################
+if [ -f $BBCPMT ] && [ -f $BBCPY ] && [ -f $BBCENIGMA ]; then
+    echo "   >>>>   All Config BBC Files found   <<<<"
+    sleep 2
+else
+    set -e
+    echo "Downloading And Insallling Config BBC Please Wait ......"
+    wget $MY_URL/bbc_pmt_v6.tar.gz -qP $TMPDIR
+    tar -xzf $TMPDIR/bbc_pmt_v6.tar.gz -C $TMPDIR
+    set +e
+    chmod -R 755 ${TMPDIR}/bbc_pmt_v6
+    sleep 1
+    echo "---------------------------------------------"
+   
+    echo "---------------------------------------------"
+fi
+
+#########################
+if [ $OSTYPE = "Opensource" ]; then
+    if [ -f $ASTRACONF ] && [ -f $ABERTISBIN ] && [ -f $SYSCONF ]; then
+        echo "   >>>>   All Config $PACKAGE Files found   <<<<"
+        sleep 2
+    else
+        set -e
+        echo "Downloading Config $PACKAGE Please Wait ......"
+        wget $MY_URL/astra-"${plarform}".tar.gz -qP $TMPDIR
+        tar -xzf $TMPDIR/astra-"${plarform}".tar.gz -C $TMPDIR
+        set +e
+        chmod -R 755 ${TMPDIR}/${PACKAGE}
+        sleep 1
+        echo "---------------------------------------------"
+        if [ ! -f $SYSCONF ]; then
+            cp -f $CONFIGsysctltmp $ETCPATH >/dev/null 2>&1
+            echo "[send (sysctl.conf) file]"
+        fi
+        if [ ! -f $ASTRACONF ]; then
+            cp -f $CONFIGastratmp $ASTRAPATH >/dev/null 2>&1
+            echo "[send (astra.conf) file]"
+        fi
+        if [ ! -f $ABERTISBIN ]; then
+            cp -f $CONFIGabertistmp $ASTRAPATH/scripts >/dev/null 2>&1
+            echo "[send (abertis) file]"
+        fi
+        echo "---------------------------------------------"
+    fi
+fi
+
+#########################
+rm -rf ${TMPDIR}/channels_backup_by_Emil-Nabil.tar.gz
+rm -rf ${TMPDIR}/* astra-
+rm -rf ${TMPDIR}/* bbc_pmt_v6
+
+sync
+echo ""
+echo ""
+echo "*********************************************************"
+echo "#       Channel And Config INSTALLED SUCCESSFULLY       #"
+echo "   UPLOADED BY  >>>>   EMIL_NABIL "   
+sleep 4;
+	echo '========================================================================================================================='
+echo "#                    ${VERSION}                         #"                 
+echo "*********************************************************"
+echo "#           your Device will RESTART Now                #"
+echo "*********************************************************"
+sleep 2
+
+if [ $OSTYPE = "Opensource" ]; then
+    init 6
+else
+    systemctl restart enigma2
+fi
+
+exit 0
 
 
 

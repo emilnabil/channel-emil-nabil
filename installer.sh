@@ -1,13 +1,14 @@
 #!/bin/sh
 # ###########################################
-# SCRIPT : DOWNLOAD AND INSTALL Channel
-########## #################################
-# Configure where we can find things here #
+echo " SCRIPT : DOWNLOAD AND INSTALL Channel "
+# ###########################################
 TMPDIR='/tmp'
 PACKAGE='astra-sm'
 MY_URL='https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main'
+
 ########################
 VERSION=$(wget $MY_URL/version -qO- | cut -d "=" -f2-)
+
 ########################
 BINPATH=/usr/bin
 ETCPATH=/etc
@@ -78,12 +79,13 @@ rm -rf ${TMPDIR}/channels_backup_user_"${VERSION}"* astra-* bbc_pmt_v6*
 #########################
 echo
 set -e
-echo "Downloading And Insallling Channel Please Wait ......"
+echo "Downloading And Insalling Channel Please Wait ......"
 wget $MY_URL/channels_backup_by_Emil-Nabil.tar.gz -qP $TMPDIR
 tar -zxf $TMPDIR/channels_backup_by_Emil-Nabil.tar.gz -C /
 sleep 5
 set +e
-#########################
+echo ""
+########################
 if [ -f $BBCPMT ] && [ -f $BBCPY ] && [ -f $BBCENIGMA ]; then
     echo "   >>>>   All Config BBC Files found   <<<<"
     sleep 2
@@ -156,6 +158,5 @@ else
 fi
 
 exit 0
-
 
 

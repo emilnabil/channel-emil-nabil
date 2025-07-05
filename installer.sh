@@ -10,6 +10,13 @@ MY_URL="https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main"
 echo "******************************************************************************************************************"
 echo "        DOWNLOAD AND INSTALL CHANNEL"
 echo "=================================================================================================================="
+if [ -f /etc/opkg/opkg.conf ]; then
+    STATUS='/var/lib/opkg/status'
+    OSTYPE='Opensource'
+    OPKG='opkg update'
+    OPKGINSTAL='opkg install'
+fi
+
 echo "        REMOVE OLD CHANNELS..."
 
 rm -rf /etc/enigma2/lamedb
@@ -44,8 +51,15 @@ echo "==========================================================================
 echo "        >>>> RESTARTING <<<<"
 echo "**********************************************************************************"
 
-killall -9 enigma2
+if [ "${OSTYPE}" = "Opensource" ]; then
+    killall -9 enigma2
+else
+    systemctl restart enigma2
+fi
+
 exit 0
+
+
 
 
 

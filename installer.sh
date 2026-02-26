@@ -1,43 +1,51 @@
 #!/bin/sh
 #
 # Command:
-# wget https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main/installer.sh -qO - | /bin/sh
+# wget -qO - https://github.com/emilnabil/channel-emil-nabil/raw/refs/heads/main/installer.sh | /bin/sh
 #
 # ###########################################################
 
-MY_URL="https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main"
+MY_URL="https://github.com/emilnabil/channel-emil-nabil/raw/refs/heads/main"
 
 echo "******************************************************************************************************************"
 echo "        DOWNLOAD AND INSTALL CHANNEL"
 echo "=================================================================================================================="
+
 if [ -f /etc/opkg/opkg.conf ]; then
-    STATUS='/var/lib/opkg/status'
-    OSTYPE='Opensource'
-    OPKG='opkg update'
-    OPKGINSTAL='opkg install'
+    STATUS="/var/lib/opkg/status"
+    OSTYPE="Opensource"
+    OPKG="opkg update"
+    OPKGINSTAL="opkg install"
 fi
 
 echo "        REMOVE OLD CHANNELS..."
 
-rm -rf /etc/enigma2/lamedb
-rm -rf /etc/enigma2/*list
-rm -rf /etc/enigma2/*.tv
-rm -rf /etc/enigma2/*.radio
+rm -f /etc/enigma2/lamedb
+rm -f /etc/enigma2/*.list
+rm -f /etc/enigma2/*.tv
+rm -f /etc/enigma2/*.radio
 
-#####################################################################################
 echo "        INSTALLING NEW CHANNELS..."
-cd /tmp
+
+cd /tmp || exit 1
 set -e
-wget -q "${MY_URL}/channels_backup_by_Emil-Nabil.tar.gz"
+
+wget -q "${MY_URL}/channels_backup_by_Emil-Nabil.tar.gz" -O channels_backup_by_Emil-Nabil.tar.gz
 tar -xzf channels_backup_by_Emil-Nabil.tar.gz -C /
-cd ..
+
 set +e
-rm -f /tmp/channels_backup_by_Emil-Nabil.tar.gz
+rm -f channels_backup_by_Emil-Nabil.tar.gz
+
 sleep 2
 
 echo ""
 echo "        INSTALLING ASTRA-SM PATCH"
-opkg install astra-sm -y >/dev/null 2>&1
+
+if command -v opkg >/dev/null 2>&1; then
+    opkg update >/dev/null 2>&1
+    opkg install -y astra-sm >/dev/null 2>&1
+fi
+
 sleep 1
 echo ""
 echo ""
@@ -48,18 +56,6 @@ echo "**************************************************************************
 echo "   UPLOADED BY >>>> EMIL_NABIL"
 sleep 4
 echo "========================================================================================================================="
-echo "        >>>> RESTARTING <<<<"
-echo "**********************************************************************************"
-
-if [ "${OSTYPE}" = "Opensource" ]; then
-    killall -9 enigma2
-else
-    systemctl restart enigma2
-fi
 
 exit 0
-
-
-
-
 

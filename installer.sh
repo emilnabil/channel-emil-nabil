@@ -3,6 +3,7 @@
 # wget https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main/installer.sh -qO - | /bin/sh
 ###########################################
 MY_URL="https://raw.githubusercontent.com/emilnabil/channel-emil-nabil/main"
+
 echo "******************************************************************************************************************"
 echo "        DOWNLOAD AND INSTALL CHANNEL"
 echo "=================================================================================================================="
@@ -12,6 +13,7 @@ if [ -f /etc/opkg/opkg.conf ]; then
     OPKG='opkg update'
     OPKGINSTAL='opkg install'
 fi
+
 echo "        REMOVE OLD CHANNELS..."
 rm -rf /etc/enigma2/lamedb
 rm -rf /etc/enigma2/*list
@@ -20,9 +22,11 @@ rm -rf /etc/enigma2/*.radio
 rm -rf /etc/enigma2/epg.dat
 rm -rf /etc/enigma2/timers.xml
 rm -rf /home/root/.cache/enigma2
+
 #####################################################################################
 echo "        INSTALLING NEW CHANNELS..."
 cd /tmp || exit 1
+
 if wget -q "${MY_URL}/channels_backup_by_Emil-Nabil.tar.gz"; then
     if [ -s channels_backup_by_Emil-Nabil.tar.gz ]; then
         tar -xzf channels_backup_by_Emil-Nabil.tar.gz -C /
@@ -37,9 +41,12 @@ else
     echo "        ERROR: Failed to download channels file"
     exit 1
 fi
+
 cd >/dev/null 2>&1 || exit 1
+
 echo "        WAITING 5 SECONDS TO WRITE FILES..."
 sleep 5
+
 echo ""
 echo "        INSTALLING ASTRA-SM PATCH"
 if command -v opkg >/dev/null 2>&1; then
@@ -49,6 +56,7 @@ if command -v opkg >/dev/null 2>&1; then
 else
     echo "        WARNING: opkg not found, skipping astra-sm installation"
 fi
+
 sleep 1
 echo ""
 echo ""
@@ -59,14 +67,13 @@ echo "**************************************************************************
 echo "   UPLOADED BY >>>> EMIL_NABIL"
 sleep 4
 echo "========================================================================================================================="
-echo "        >>>> RESTARTING <<<<"
+echo "        INSTALLATION COMPLETE"
 echo "**********************************************************************************"
-if command -v wget >/dev/null 2>&1; then
-    wget -qO - http://127.0.0.1/web/servicelistreload?mode=0 >/dev/null 2>&1
-    sleep 2
-    wget -qO - http://127.0.0.1/web/powerstate?newstate=3 >/dev/null 2>&1
-    sleep 4
-    echo "        Please restart enigma2 manually"
-exit 0
+echo "        Please restart Enigma2 manually to apply the changes"
+echo "        You can restart by:"
+echo "        - Pressing the restart button in the menu"
+echo "        - Or using the command: killall -9 enigma2"
+echo "**********************************************************************************"
 
+exit 0
 

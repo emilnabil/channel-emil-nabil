@@ -66,16 +66,7 @@ if command -v wget >/dev/null 2>&1; then
     sleep 2
     wget -qO - http://127.0.0.1/web/powerstate?newstate=3 >/dev/null 2>&1
     sleep 4
-    echo "        GUI RESTARTED SUCCESSFULLY"
-elif command -v killall >/dev/null 2>&1; then
-    killall enigma2 2>/dev/null
-    echo "        ENIGMA2 RESTARTED VIA KILLALL"
-elif command -v systemctl >/dev/null 2>&1; then
-    systemctl restart enigma2 2>/dev/null
-    echo "        ENIGMA2 RESTARTED VIA SYSTEMCTL"
-else
-    echo "        WARNING: Could not restart enigma2 automatically"
     echo "        Please restart enigma2 manually"
-fi
 exit 0
+
 

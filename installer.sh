@@ -56,9 +56,6 @@ if command -v wget >/dev/null 2>&1; then
     echo "        CHANNELS RELOADED VIA WEBIF"
 fi
 
-echo "        RESTARTING ENIGMA2..."
-killall -9 enigma2 2>/dev/null
-
 echo "****************************************************************************************************************************"
 echo "#       CHANNEL INSTALLED SUCCESSFULLY       #"
 echo "*********************************************************"
@@ -71,4 +68,5 @@ echo "        If Enigma2 doesn't restart automatically, please reboot manually"
 echo "**********************************************************************************"
 
 exit 0
+
 
